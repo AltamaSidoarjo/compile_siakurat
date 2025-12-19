@@ -22,3 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+function getQueryParam(param) {
+    const params = new URLSearchParams(window.location.search);
+    const value = params.get(param);
+    return value ? parseInt(value) : null;
+}
